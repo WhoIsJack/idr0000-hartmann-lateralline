@@ -4,38 +4,38 @@
 # Section with generic information about the study including title, description, publication details (if applicable) and contact details																																	
 																																	
 Comment[IDR Study Accession]	# leave blank																																
-Study Title	# fill in																																
-Study Type	# look up in https://www.ebi.ac.uk/ols/ontologies/efo or leave blank																																
+Study Title	An Image-Based Data-Driven Analysis of Cellular Architecture in a Developing Tissue																															
+Study Type	microscopy assay
 Study Type Term Source REF	# leave blank																																
 Study Type Term Accession	# leave blank																																
-Study Description	# a brief description of the overall aim of the study.  The publication abstract can be entered here.																	
-Study Key Words	# fill in																												
-Study Organism	# if more than one organism was studied, enter them in separate columns																																
+Study Description	A data-driven analysis of cell morphology and intracellular organization in the developing zebrafish posterior lateral line primordium, a model tissue for the study of self-organized morphogenesis. 3D image stacks were acquired using AiryScan FAST-mode confocal fluorescence microscopy. Automated single-cell segmentation and point cloud-based morphometry were used to extract numerical features representing cell morphology and intracellular protein distributions. Machine learning was used on the extracted numerical features to perform data integration across experiments and context-guided data visualization. The resulting data was analyzed to discover biologically meaningful patterns at the cell and tissue scale.
+Study Key Words	image analysis, cellular morphometry, morphogenesis, lateral line primordium, data integration, context-guided visualization
+Study Organism	Danio rerio
 Study Organism Term Source REF	NCBITaxon																																
 Study Organism Term Accession	# leave blank																																
-Study Experiments Number	# enter how many separate experiments are in this study.  An experiment is a discrete piece of work with its own protocols, results etc.																																
-Study External URL	# if there is an existing web page related to the study enter it here																																
-Study Public Release Date	# enter a date of when the data can be made public, if known																																
+Study Experiments Number	11  # COMMENT: this could be reduced since many of the experiments are quite similar. However, I thought more structure is better, as it helps orientation.
+Study External URL	# COMMENT: Could this be a link to the GitHub repository hosting the study's code?
+Study Public Release Date	# COMMENT: This is not known yet, as the article is currently in peer review.
 																																	
-# Study Publication																																	
+# Study Publication
 Study PubMed ID	# fill in if known																																
 Study Publication Title	# fill in if known																																
-Study Author List	# fill in if known																																
+Study Author List	Hartmann J, Wong M, Gallo E, Gilmour D
 Study PMC ID	# fill in if known																																
 Study DOI	# fill in if known																																
 																																	
 # Study Contacts																																	
-Study Person Last Name	# fill in, you can add more people, each in their own column if you wish																																
-Study Person First Name	# fill in																																
-Study Person Email	# fill in																																
-Study Person Address	# fill in																																
-Study Person ORCID	# fill in																																
-Study Person Roles	submitter																																
+Study Person Last Name	Hartmann	Gilmour
+Study Person First Name	Jonas	Darren																													
+Study Person Email	jonas.m.hartmann@protonmail.com	darren.gilmour@imls.uzh.ch																													
+Study Person Address	Developmental Biology Unit, European Molecular Biology Laboratory (EMBL), Heidelberg, Germany	Institute of Molecular Life Sciences, University of Zurich (UZH), Zurich, Switzerland 
+Study Person ORCID	0000-0002-5600-8285	N/A
+Study Person Roles	submitter, study lead	principal investigator
 																																	
 # Study License and Data DOI																																	
-Study License	# fill in (CC-BY preferred)																																
+Study License	CC-BY
 Study License URL	# leave blank																																
-Study Copyright	# fill in																																
+Study Copyright	Hartmann et al
 Study Data Publisher	# leave blank																																
 Study Data DOI	# leave blank																																
 																																	
@@ -46,48 +46,48 @@ Term Source URI	http://purl.obolibrary.org/obo/	http://www.ebi.ac.uk/efo/	http:/
 # EXPERIMENT SECTION																																	
 # Experiment Section containing all information relative to each experiment in the study including materials used, protocols names and description, phenotype names and description. For multiple experiments this section should be repeated.  Copy and paste the whole section below and fill out for the next experiment																																	
 																																	
-Experiment Number	# enter '1' for the first experiment, '2' for the second etc																																
+Experiment Number	1
 Comment[IDR Experiment Name]	# leave blank																																
-Experiment Description	# a brief description of the experiment																																
-Experiment Size	5D Images: 	Average Image Dimension (XYZCT):	Total Tb: 	# fill in any values you know																													
-Experiment Example Images	# if you have a favourite image from the screen, list it here.  We may use this image to highlight your screen																																
-Experiment Imaging Method	# fill in with the name of the imaging method used e.g. 3D-SIM, super resolution microscopy etc																																
+Experiment Description	3D stacks of the lateral line primordium labeled the membrane marker cldnB:lyn-EGFP, used for segmentation and cell morphometry.
+Experiment Size	5D Images: 24	Average Image Dimension (XYZCT): 1636 x 816 x 126 x 2 x 1	Total Tb: 0.0112																						
+Experiment Example Images	E6E56C3F42
+Experiment Imaging Method	confocal microscopy (AiryScan FAST-mode confocal fluorescence microscopy)	# COMMENT: Could not find a precise term in Fbbi that describes this method
 Experiment Imaging Method Term Source REF	Fbbi																																
-Experiment Imaging Method Term Accession	# look up in http://www.ebi.ac.uk/ols/ontologies/fbbi or leave blank																																
-Experiment Comments	# if there is anything you would like to say about the experiment not covered elsewhere you can enter it here e.g. image X is missing, or an additional file is included																																
+Experiment Imaging Method Term Accession	FBbi_00000251
+Experiment Comments
 																																	
 # assay files																																	
-Experiment Assay File	# put in the name of the assay file																																
+Experiment Assay File	idr????-experimentA-assay.txt
 Experiment Assay File Format	tab-delimited text																																
-Assay Experimental Conditions	# if there were any experimental conditions some cells were grown under as part of the study enter the information here e.g. different environmental stress conditions, or mutant background compared to wild type																																
+Assay Experimental Conditions
 Assay Experimental Conditions Term Source REF	# leave blank																																
 Assay Experimental Conditions Term Accession	# leave blank																																
-Quality Control Description	# a brief description of the kind of quality control measures that were taken (if applicable)																																
+Quality Control Description	Single-cell segmentation quality was checked manually for samples where a large number of cells (>20%) failed to be recognized by the algorithm.
 																																	
 # Protocols																																	
-Protocol Name	growth protocol	treatment protocol	image acquistion and feature extraction protocol	data analysis protocol																													
-Protocol Type	growth protocol	treatment protocol	image acquistion and feature extraction protocol	data analysis protocol																													
+Protocol Name	growth protocol	image acquistion and feature extraction protocol	data analysis protocol																													
+Protocol Type	growth protocol	image acquistion and feature extraction protocol	data analysis protocol																													
 Protocol Type Term Source REF	EFO	EFO																															
 Protocol Type Term Accession	EFO_0003789	EFO_0003969																															
-Protocol Description	# text about how the cells were grown here	# text about any specific treatment to the cells here	# text about labeling, the imaging hardware and software, feature extraction methods.	# text about the analysis of the images and features if applicable																													
+Protocol Description	Zebrafish embryos were grown in E3 buffer at 27-30°C according to standard procedures (see zfin.org/zf_info/zfbook/zfbk.html). Pigmentation was prevented by treating embryos with 0.002% N-phenylthiourea (PTU) starting at 25hpf. For imaging, embryos were dechorionated manually, anaesthetized with 0.01% Tricaine and mounted in 1% peqGOLD Low Melt Agarose in E3 containing 0.01% Tricaine in a MatTek Glass Bottom Microwell Dish (35mm Petri dish, 10mm microwell, 0.16-0.19mm coverglass).	Embryos carried the transgenic membrane label cldnb:lyn-EGFPR (see doi.org/10.1016/j.devcel.2006.02.019). Imaging was performed on the Zeiss LSM880 AiryScan confocal microscope in FAST mode with a 40X 1.2NA water objective with Immersol W immersion fluid. Deconvolution was performed using the ZEN Black Software's 3D AiryScan deconvolution with 'auto' settings. Single-cell segmentation, feature extraction and point cloud-based morphometry for feature embedding were performed using custom python pipelines and algorithms, described in detail in the study publication.	Numerical features describing protein distributions, smFISH RNA spot counts and manually annotated cell archetypes were predicted for each cell using machine learning based on cell shape features as input, as described in the study publication.
 																																	
 # Phenotypes																																	
-Phenotype Name	# if any specific phenotypes were identified in the experiment enter the information here.  Each phenotype should be in a separate column.																																
-Phenotype Description	# give a brief description of each phenotype, or how it was determined e.g. if score X is greater than Y then this phenotype assigned.																																
-Phenotype Score Type	# choose from: manual, automatic																																
-Phenotype Term Source REF	CMPO																																
-Phenotype Term Name	# if your phenotype matches a term in the Cellular Microscopy Phenotype Ontology enter it here http://www.ebi.ac.uk/CMPO																																
-Phenotype Term Accession	# if your phenotype matches a term in the Cellular Microscopy Phenotype Ontology enter the accession for the term here http://www.ebi.ac.uk/CMPO		 																														
+Phenotype Name
+Phenotype Description
+Phenotype Score Type
+Phenotype Term Source REF
+Phenotype Term Name
+Phenotype Term Accession
 																																	
 																																	
-# Feature Level Data Files (give individual file details unless there is one file per well)																																	
+# Feature Level Data Files (give individual file details unless there is one file per well)	# NOTE TO SELF: Use this for metadata (+covariates) (+manual annotation?)?
 Feature Level Data File Name	# list any feature level table files here																																
 Feature Level Data File Format	# a description of the table																																
 Feature Level Data File Description	# tab-delimited text or other format																																
 Feature Level Data Column Name	# list all the columns in the table, each column in the table should be in a separate column here																																
 Feature Level Data Column Description	# describe the values in each column																																
 																																	
-#  Processed Data Files 																																	
+# Processed Data Files	# NOTE TO SELF: Use this for any CBE and atlas-derived numbers?
 Processed Data File Name	# the name of the processed data file																																
 Processed Data File Format	tab-delimited text																																
 Processed Data File Description	# a brief description of the what is in the file																																
